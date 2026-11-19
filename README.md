@@ -91,7 +91,7 @@ with socketserver.TCPServer(("", PORT), Handler) as server:
     print("This is my webserver")
     server.serve_forever()
 # OUTPUT:
-<img width="1607" height="886" alt="output png" src="https://github.com/user-attachments/assets/f6163b60-2b6a-413f-b78b-add2ffdd626d" />
+<img width="560" height="241" alt="image" src="https://github.com/user-attachments/assets/4e45793c-396f-4225-b619-af3b3d922916" />
 <img width="1062" height="387" alt="Screenshot 2026-11-18 114735" src="https://github.com/user-attachments/assets/d8e4bb62-fb71-4fac-8d18-f062fe374d7d" />
 
 # RESULT:
