@@ -1,6 +1,6 @@
 # EX01 Developing a Simple Webserver
 
-# Date: 19-11-2026
+# Date: 20-11-2026
 # AIM:
 To develop a simple webserver to serve html pages and display the configuration details of laptop.
 
@@ -21,78 +21,61 @@ Serving the HTML pages.
 Testing the webserver.
 
 # PROGRAM:
-<!DOCTYPE html>
-<html>
+```
 <head>
-    <title>Computer Network Applications</title>
+    <title>My Laptop Configuration</title>
+    <style>
+        table, th, td, tr {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-
-<h2>Computer Network Applications</h2>
-
-<table border="1" cellpadding="8">
+<table>
+    <caption><h1>My Laptop Configuration</h1></caption>
     <tr>
-        <th>Application Name</th>
-        <th>Network Protocol</th>
-        <th>Description</th>
+        <th>Component</th>
+        <th>Specification</th>
     </tr>
-
     <tr>
-        <td>World Wide Web (HTTP/HTTPS)</td>
-        <td>HTTP / TCP</td>
-        <td>Browsing websites and web pages across the internet.</td>
+        <td>CPU</td>
+        <td>Intel(R) Core(TM) 5 210H (2.20 GHz)</td>
     </tr>
-
     <tr>
-        <td>Email (SMTP / IMAP)</td>
-        <td>SMTP, POP3, IMAP</td>
-        <td>Sending, receiving, and managing electronic mail.</td>
+        <td>Installed RAM</td>
+        <td>16.0 GB (15.7 GB usable)</td>
     </tr>
-
     <tr>
-        <td>File Transfer Protocol (FTP)</td>
-        <td>FTP / TCP</td>
-        <td>Transferring files between a client and a server.</td>
+        <td>Storage</td>
+        <td>110 GB of 477 GB used</td>
     </tr>
-
     <tr>
-        <td>Domain Name System (DNS)</td>
-        <td>DNS / UDP, TCP</td>
-        <td>Translating human-readable domain names into IP addresses.</td>
+        <td>Graphics card</td>
+        <td>Intel(R) Graphics (128 MB)</td>
     </tr>
-
     <tr>
-        <td>Remote Desktop (RDP / SSH)</td>
-        <td>RDP, SSH / TCP</td>
-        <td>Accessing and controlling a computer or server remotely.</td>
+        <td>System type</td>
+        <td>64-bit operating system, x64-based processor</td>
     </tr>
-
     <tr>
-        <td>VoIP / Video Conferencing</td>
-        <td>RTP, SIP / UDP</td>
-        <td>Real-time voice and video communication over the network.</td>
+        <td>Pen and touch support</td>
+        <td>No pen or touch input is available for this display</td>
     </tr>
-
+    <tr>
+        <td>OS</td>
+        <td>Windows 11 Home Single Language</td>
+    </tr>
 </table>
-
 </body>
 </html>
-import http.server
-import socketserver
-
-PORT = 8080
-
-class Handler(http.server.SimpleHTTPRequestHandler):
-    def do_GET(self):
-        print("Get request received...")
-        super().do_GET()
-
-with socketserver.TCPServer(("", PORT), Handler) as server:
-    print("This is my webserver")
-    server.serve_forever()
+```
 # OUTPUT:
-<img width="560" height="241" alt="image" src="https://github.com/user-attachments/assets/4e45793c-396f-4225-b619-af3b3d922916" />
-<img width="1062" height="387" alt="Screenshot 2026-11-18 114735" src="https://github.com/user-attachments/assets/d8e4bb62-fb71-4fac-8d18-f062fe374d7d" />
-
+![alt text](image.png)
 # RESULT:
 The program for implementing simple webserver is executed successfully.
